@@ -7,11 +7,11 @@
             "Body": "All that's here is a bunch of Junk",
             "Choices": [
                 {
-                    "Text": "North",
+                    "Text": "North to Fuse Room",
                     "Target": "Fuse Box Room"
                 },
                 {
-                    "Text": "South",
+                    "Text": "South to Cars",
                     "Target": "Cars"
                 }
             ]
@@ -20,7 +20,7 @@
             "Body": "It seems like the gate needs power of some sort.",
             "Choices": [
                 {
-                    "Text": "South",
+                    "Text": "South to Junk Pile",
                     "Target": "Junk Pile"
                 },
                 {
@@ -33,19 +33,19 @@
             "Body": "Here are a bunch of Cars, they may conceal hidden treasure",
             "Choices": [
                 {
-                    "Text": "North",
+                    "Text": "North to Junk Pile",
                     "Target": "Junk Pile"
                 },
                 {
-                    "Text": "West",
+                    "Text": "West to Tires",
                     "Target": "Tires"
                 },
                 {
-                    "Text": "East",
+                    "Text": "East to Magnet Crane",
                     "Target": "Magnet Crane"
                 },
                 {
-                    "Text": "South",
+                    "Text": "South to E-Waste",
                     "Target": "E-Waste"
                 }
             ]
@@ -54,7 +54,7 @@
             "Body": "Nothing but a bunch of Tires.",
             "Choices": [
                 {
-                    "Text": "East",
+                    "Text": "East to Cars",
                     "Target": "Cars"
                 }
             ]
@@ -63,7 +63,7 @@
             "Body": "Electronic Goop.",
             "Choices": [
                 {
-                    "Text": "North",
+                    "Text": "North to Cars",
                     "Target": "Cars"
                 },
                 {
@@ -77,17 +77,17 @@
             "Body": "A magnet Crane's magnet looms over one of the cars in the Car area.",
             "Choices": [
                 {
-                    "Text": "West",
+                    "Text": "West to Cars",
                     "Target": "Cars"
                 },
                 {
-                    "Text": "North",
+                    "Text": "North to Building",
                     "Target": "Building"
                 }
             ]
         },
         "Building": {
-            "Body": "You find a building and decide to enter.",
+            "Body": "You find a building.",
             "Choices": [
                 {
                     "Text": "One Way Slide West",
