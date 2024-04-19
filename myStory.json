@@ -1,58 +1,120 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "Junkyard Escape",
+    "Credits": "Inspired by Adam Smith (amsmith@ucsc.edu), Edited by Marvel McDowell (majmcdow@ucsc.edu).",
+    "InitialLocation": "Junk Pile",
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
-            "Choices": [
-                {
-                    "Text": "South",
-                    "Target": "Porter"
-                }
-            ]
-        },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
+        "Junk Pile": {
+            "Body": "All that's here is a bunch of Junk",
             "Choices": [
                 {
                     "Text": "North",
-                    "Target": "Kresge"
+                    "Target": "Fuse Box Room"
                 },
                 {
                     "Text": "South",
-                    "Target": "Rachel Carson"
+                    "Target": "Cars"
                 }
             ]
         },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
+        "Fuse Box Room": {
+            "Body": "It seems like the gate needs power of some sort.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": "South",
+                    "Target": "Junk Pile"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
-                }
-            ]
-        },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
-                },
-                {
-                    "Text": "South",
+                    "Text": "Gate",
                     "Target": "Beyond"
                 }
             ]
         },
+        "Cars": {
+            "Body": "Here are a bunch of Cars, they may conceal hidden treasure",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Target": "Junk Pile"
+                },
+                {
+                    "Text": "West",
+                    "Target": "Tires"
+                },
+                {
+                    "Text": "East",
+                    "Target": "Magnet Crane"
+                },
+                {
+                    "Text": "South",
+                    "Target": "E-Waste"
+                }
+            ]
+        },
+        "Tires": {
+            "Body": "Nothing but a bunch of Tires.",
+            "Choices": [
+                {
+                    "Text": "East",
+                    "Target": "Cars"
+                }
+            ]
+        },
+        "E-Waste": {
+            "Body": "Electronic Goop.",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Target": "Cars"
+                },
+                {
+                    "Text": "Take Fuse",
+                    "Fuse": "Fuse2",
+                    "Target": "E-Waste"
+                }
+            ]
+        },
+        "Magnet Crane": {
+            "Body": "A magnet Crane's magnet looms over one of the cars in the Car area.",
+            "Choices": [
+                {
+                    "Text": "West",
+                    "Target": "Cars"
+                },
+                {
+                    "Text": "North",
+                    "Target": "Building"
+                }
+            ]
+        },
+        "Building": {
+            "Body": "You find a building and decide to enter.",
+            "Choices": [
+                {
+                    "Text": "One Way Slide West",
+                    "Target": "Junk Pile"
+                },
+                {
+                    "Text": "Basement",
+                    "Target": "Basement"
+                }
+            ]
+        },
+        "Basement": {
+            "Body": "Oh, you found a fuse.",
+            "Choices": [
+                {
+                    "Text": "Exit Basement",
+                    "Target": "Building"
+                }
+            ]
+        },
+        "Fuses": {
+            "Fuse1": "First Fuse",
+            "Fuse2": "Second Fuse",
+            "Fuse3": "Third Fuse"
+        },
         "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+            "Body": "You have escaped!!!"
         }
     }
 }
