@@ -11,7 +11,7 @@ class Start extends Scene {
 
 class Location extends Scene {
 
-    static hasFuse = false;
+    //static hasFuse = false;
 
 
     create(key) {
@@ -33,7 +33,7 @@ class Location extends Scene {
 
         }
     }
-
+    //I implemented the "mechanic" through having the crane move without the need for making a new class AKA it's all in the myStory.json.
     handleChoice(choice) {
         if(choice) {
             this.engine.show("&gt; "+choice.Text);
@@ -45,12 +45,7 @@ class Location extends Scene {
     // handleChoice(choice) {
     //     if (choice.Fuse) {
     //         Location.hasFuse = true;
-    //         this.engine.show("You now have the Fuse");
-    //     } else if (choice) {
-    //         this.engine.show("&gt; " + choice.Text);
-    //         this.engine.gotoScene(Location, choice.Target);
-    //     }
-    // }
+
 }
 
 class End extends Scene {
