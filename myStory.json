@@ -11,8 +11,17 @@
                     "Target": "Fuse Box Room"
                 },
                 {
-                    "Text": "South to Cars",
-                    "Target": "Cars"
+                    "Text": "East to Building",
+                    "Target": "Building"
+                }
+            ]
+        },
+        "Junk Pile End": {
+            "Body": "You already have all you need to escape.",
+            "Choices": [
+                {
+                    "Text": "Return North to Fuse Box Room",
+                    "Target": "Fuse Box Room Final"
                 }
             ]
         },
@@ -25,6 +34,28 @@
                 },
                 {
                     "Text": "Gate",
+                    "Target": "Nothing"
+                }
+            ]
+        },
+        "Nothing": {
+            "Body": "You try to move the gate but it doesn't budge",
+            "Choices": [
+                {
+                    "Text": "South to Junk Pile",
+                    "Target": "Junk Pile"
+                }
+            ]
+        },
+        "Fuse Box Room Final": {
+            "Body": "You Place the Fuse into the fuse box and the gate springs into action",
+            "Choices": [
+                {
+                    "Text": "South to Junk Pile",
+                    "Target": "Junk Pile End"
+                },
+                {
+                    "Text": "Gate",
                     "Target": "Beyond"
                 }
             ]
@@ -33,20 +64,12 @@
             "Body": "Here are a bunch of Cars, they may conceal hidden treasure",
             "Choices": [
                 {
-                    "Text": "North to Junk Pile",
-                    "Target": "Junk Pile"
+                    "Text": "North to Building",
+                    "Target": "Building"
                 },
                 {
-                    "Text": "West to Tires",
-                    "Target": "Tires"
-                },
-                {
-                    "Text": "East to Magnet Crane",
+                    "Text": "West to Magnet Crane",
                     "Target": "Magnet Crane"
-                },
-                {
-                    "Text": "South to E-Waste",
-                    "Target": "E-Waste"
                 }
             ]
         },
@@ -54,22 +77,17 @@
             "Body": "Nothing but a bunch of Tires.",
             "Choices": [
                 {
-                    "Text": "East to Cars",
-                    "Target": "Cars"
+                    "Text": "East to Crane",
+                    "Target": "Magnet Crane"
                 }
             ]
         },
         "E-Waste": {
-            "Body": "Electronic Goop.",
+            "Body": "Electronic Goop but no Fuse.",
             "Choices": [
                 {
-                    "Text": "North to Cars",
-                    "Target": "Cars"
-                },
-                {
-                    "Text": "Take Fuse",
-                    "Fuse": "Fuse2",
-                    "Target": "E-Waste"
+                    "Text": "North to Crane",
+                    "Target": "Magnet Crane"
                 }
             ]
         },
@@ -77,30 +95,53 @@
             "Body": "A magnet Crane's magnet looms over one of the cars in the Car area.",
             "Choices": [
                 {
-                    "Text": "West to Cars",
+                    "Text": "East to Cars",
                     "Target": "Cars"
                 },
                 {
-                    "Text": "North to Building",
-                    "Target": "Building"
+                    "Text": "West to Tires",
+                    "Target": "Tires"
+                },
+                {
+                    "Text": "South to E-Waste",
+                    "Target": "E-Waste"
+                },
+                {
+                    "Text": "Turn on Magnet",
+                    "Target": "Car no Car" 
                 }
+                
+            ]
+        },
+        "Car no Car": {
+            "Body": "The car has moved, revealing a Fuse",
+            "Choices": [
+                {
+                    "Text": "Take Fuse and go to Fuse Room",
+                    "Target": "Fuse Box Room Final"
+                }
+
             ]
         },
         "Building": {
-            "Body": "You find a building.",
+            "Body": "Here's a seemingly abandoned building",
             "Choices": [
                 {
-                    "Text": "One Way Slide West",
+                    "Text": "West to Junk Pile",
                     "Target": "Junk Pile"
                 },
                 {
-                    "Text": "Basement",
+                    "Text": "Enter Basement",
                     "Target": "Basement"
+                },
+                {
+                    "Text": "South to Cars",
+                    "Target": "Cars"
                 }
             ]
         },
         "Basement": {
-            "Body": "Oh, you found a fuse.",
+            "Body": "There's a note that reads, I left a spare fuse under one of the cars. You can use the Crane to gain acess to the fuse.",
             "Choices": [
                 {
                     "Text": "Exit Basement",
@@ -108,13 +149,8 @@
                 }
             ]
         },
-        "Fuses": {
-            "Fuse1": "First Fuse",
-            "Fuse2": "Second Fuse",
-            "Fuse3": "Third Fuse"
-        },
         "Beyond": {
-            "Body": "You have escaped!!!"
+            "Body": "You have escaped the Junkyard!!!"
         }
     }
 }

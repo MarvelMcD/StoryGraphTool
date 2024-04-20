@@ -10,6 +10,10 @@ class Start extends Scene {
 }
 
 class Location extends Scene {
+
+    static hasFuse = false;
+
+
     create(key) {
         let locationData = this.engine.storyData.Locations[key]; // TODO: use `key` to get the data object for the current story location
         this.engine.show(locationData.Body); // TODO: replace this text by the Body of the location data
@@ -18,34 +22,35 @@ class Location extends Scene {
             for(let choice of locationData.Choices) { // TODO: loop over the location's Choices
                 this.engine.addChoice(choice.Text, choice); // TODO: use the Text of the choice
                 // TODO: add a useful second argument to addChoice so that the current code of handleChoice below works
+                if(choice.Text === "Take Fuse"){
+                    location.hasfuse = true;
+                }
             }
         } else {
             this.engine.addChoice("The end.");
         }
+        if(locationData.Fuses){
+
+        }
     }
 
-    // handleChoice(choice) {
-    //     if(choice) {
-    //         this.engine.show("&gt; "+choice.Text);
-    //         this.engine.gotoScene(Location, choice.Target);
-    //     } else {
-    //         this.engine.gotoScene(End);
-    //     }
-    // }
     handleChoice(choice) {
-        if (choice && typeof choice === 'string' && this.engine.storyData.Fuses[choice]) {
-            // Handle collecting the fuse
-            this.engine.show(`You collected ${this.engine.storyData.Fuses[choice]}.`);
-            // Remove the fuse from the location
-            delete this.engine.storyData.Locations[this.engine.currentLocation].Fuse;
-            // Proceed to the next scene or update as needed
-        } else if (choice) {
-            this.engine.show("&gt; " + choice.Text);
+        if(choice) {
+            this.engine.show("&gt; "+choice.Text);
             this.engine.gotoScene(Location, choice.Target);
         } else {
             this.engine.gotoScene(End);
         }
     }
+    // handleChoice(choice) {
+    //     if (choice.Fuse) {
+    //         Location.hasFuse = true;
+    //         this.engine.show("You now have the Fuse");
+    //     } else if (choice) {
+    //         this.engine.show("&gt; " + choice.Text);
+    //         this.engine.gotoScene(Location, choice.Target);
+    //     }
+    // }
 }
 
 class End extends Scene {
