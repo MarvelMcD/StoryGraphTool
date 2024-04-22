@@ -33,7 +33,7 @@ class Location extends Scene {
 
         }
     }
-    //I implemented the "mechanic" through having the crane move without the need for making a new class AKA it's all in the myStory.json.
+    //I implemented the "mechanic" through having the crane move the car without the need for making a new class AKA it's all in the myStory.json.
     handleChoice(choice) {
         if(choice) {
             this.engine.show("&gt; "+choice.Text);
